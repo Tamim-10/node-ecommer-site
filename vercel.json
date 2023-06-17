@@ -11,11 +11,5 @@
         "src": "/(.*)",
         "dest": "/"
       }
-    ],
-    "env": {
-        "MONGO_USER":"tamim", 
-        "MONGO_PASSWORD":"jwyn0oloatQFaedn",
-        "MONGO_DEFAULT_DATABASE":"shopDB",
-        "STRIPE_KEY":"sk_test_51Mqif0SHhN8CXYFA3LdYUPeK1ylMLbNjwo6cYX5p0CUmxjatUnJJAnHEtxCa5hItz6m0IRgvkT7Cckt57TNoe6Yz00dpvFVenx"
-    }
+    ]
 }
