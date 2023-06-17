@@ -1,5 +1,5 @@
 const path = require("path");
-const fs = require("fs");     
+const fs = require("fs");       
 const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
@@ -9,7 +9,7 @@ const flash = require("connect-flash");
 const multer = require('multer'); //Handling File Uploads with Multer
 const helmet = require('helmet'); //Setting Secure Response Headers with Helmet
 const compression = require('compression');//Node Compressing Assets
-const morgan = require('morgan');//Used for logging HTTP requests 
+// const morgan = require('morgan');//Used for logging HTTP requests 
 
 const errorController = require("./controllers/error");
 const mongoose = require("mongoose");
@@ -60,11 +60,11 @@ const adminRoutes = require("./routes/admin");
 const shopRoutes  = require("./routes/shop");
 const authRoutes  = require("./routes/auth");
 
-const accessLogStream = fs.createWriteStream(path.join(__dirname,'access.log'),{flags:'a'});
+// const accessLogStream = fs.createWriteStream(path.join(__dirname,'access.log'),{flags:'a'});
 
 app.use(helmet());// Use Helmet!
 app.use(compression());//In Node.js, you can use the compression middleware to enable gzip compression for your HTTP responses. Gzip compression reduces the size of the response body before sending it over the network, resulting in faster transmission and reduced bandwidth usage. 
-app.use(morgan('combined',{stream:accessLogStream})); //The 'combined' format is a commonly used format that includes detailed information about each request. 
+// app.use(morgan('combined',{stream:accessLogStream})); //The 'combined' format is a commonly used format that includes detailed information about each request. 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(multer({storage:fileStorage,fileFilter: fileFilter}).single('image')); 
