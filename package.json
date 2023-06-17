@@ -1,5 +1,5 @@
 {
-  "name": "Ecommerce Site",
+  "name": "node-ecommerce-site",
   "version": "1.0.0",
   "description": "Ecommerce Site",
   "main": "app.js",
@@ -7,10 +7,7 @@
     "node":"18.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "start-server": "node app.js",
-    "start:dev": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "Md Tamim Arshad",
   "license": "ISC",
