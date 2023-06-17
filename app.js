@@ -1,5 +1,5 @@
-const path = require("path");
-const fs = require("fs");       
+const path = require("path");  
+// const fs = require("fs");       
 const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
@@ -8,7 +8,7 @@ const csurf = require("csurf");
 const flash = require("connect-flash");
 const multer = require('multer'); //Handling File Uploads with Multer
 const helmet = require('helmet'); //Setting Secure Response Headers with Helmet
-const compression = require('compression');//Node Compressing Assets
+// const compression = require('compression');//Node Compressing Assets
 // const morgan = require('morgan');//Used for logging HTTP requests 
 
 const errorController = require("./controllers/error");
@@ -16,7 +16,7 @@ const mongoose = require("mongoose");
 // const mongoConnect = require('./util/database').mongoConnect;
 const User = require("./models/user");
 
-console.log(process.env.NODE_ENV); //Environment Vairables  
+console.log(`NODE_ENV - ${process.env.NODE_ENV}`); //Environment Vairables  
 
 const MONGODB_URI =
   `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.ey6uzuo.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
@@ -63,7 +63,7 @@ const authRoutes  = require("./routes/auth");
 // const accessLogStream = fs.createWriteStream(path.join(__dirname,'access.log'),{flags:'a'});
 
 app.use(helmet());// Use Helmet!
-app.use(compression());//In Node.js, you can use the compression middleware to enable gzip compression for your HTTP responses. Gzip compression reduces the size of the response body before sending it over the network, resulting in faster transmission and reduced bandwidth usage. 
+// app.use(compression());//In Node.js, you can use the compression middleware to enable gzip compression for your HTTP responses. Gzip compression reduces the size of the response body before sending it over the network, resulting in faster transmission and reduced bandwidth usage. 
 // app.use(morgan('combined',{stream:accessLogStream})); //The 'combined' format is a commonly used format that includes detailed information about each request. 
 
 app.use(bodyParser.urlencoded({ extended: false }));
